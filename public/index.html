@@ -1,39 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Just the simplest page.">
-    <!-- Load jQuery from a CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-        crossorigin="anonymous"></script>
+    <script src="jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <main>
         <h1>A page</h1>
-        <!-- My favourite 90s music compilation is 'No Alternative' -->
-        <!-- Use a <button> tag instead of <img> to create a button -->
-        <button type="button"><img src="doc.svg" alt="Doctor icon" width="200" height="200"></button>
-        <!-- Add `rel="noopener"` to the link, since it points to another domain -->
-        <p>Valid according to the <a target="_blank" rel="noopener" href="https://www.w3.org/">World Wide Web
+        <img src="doc.svg" role="button" width="200" height="200">
+        <p>Valid according to the <a href="https://www.w3.org/" target="_blank" rel="noopener">World Wide Web
                 Consortium</a></p>
         <form method="post">
             <label for="email">Enter your email (required):</label>
-            <!-- Add the `required` attribute to make the input required -->
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Submit</button>
+            <input type="email" id="email" required>
+            <button>Submit</button>
         </form>
     </main>
     <script>
         // Change the background color to light green
         document.body.style.backgroundColor = 'rgb(138, 255, 212)';
         // Fix the console assertion error by changing the expected background color
-        console.assert(document.body.style.backgroundColor === 'rgb(138, 255, 212)', {
-            errorMsg: "Nope, it's " + document.body.style.backgroundColor
-        });
+        console.assert(document.body.style.backgroundColor === 'rgb(138, 255, 212)', "Error: Background color not set correctly");
     </script>
 </body>
 
